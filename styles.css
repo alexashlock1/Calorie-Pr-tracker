@@ -1,0 +1,179 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body and Main Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  color: #eaeaea;
+}
+
+header {
+  margin-top: 20px;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  text-align: center;
+  color: #f5f5f5;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Two-Column Layout */
+.column-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Section Styling */
+section {
+  flex: 1;
+  background: #333;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+/* Form and Input Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #ddd;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #444;
+  color: #eaeaea;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #007bff;
+}
+
+button {
+  background-color: #cc6600;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b35900;
+}
+
+/* Date Display and Totals */
+#displayed-day {
+  font-size: 1.1em;
+  color: #e0e0e0;
+  margin: 10px 0;
+}
+
+#total-calories {
+  font-weight: bold;
+  color: #eaeaea;
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+
+/* Calorie List Styling */
+#calorie-list-container {
+  background: #3a3a3a;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+#calorie-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+#calorie-list-container ul strong {
+  font-size: 1.1em;
+  color: #4a90e2;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#calorie-list-container li {
+  padding: 5px 0;
+  font-size: 1em;
+  color: #bbb;
+  border-bottom: 1px solid #555;
+}
+
+#calorie-list-container li:last-child {
+  border-bottom: none;
+}
+
+/* PR Result and Tracker Styling */
+#pr-result {
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-top: 15px;
+}
+
+#pr-tracker-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#pr-tracker-list li {
+  padding: 5px 0;
+  font-size: 1em;
+  color: #ccc;
+  border-bottom: 1px solid #555;
+}
+
+#pr-tracker-list li:last-child {
+  border-bottom: none;
+}
+
+/* Delete Button Styling */
+.delete-btn {
+  margin-left: 10px;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}

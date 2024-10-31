@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie & PR Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Calorie & PR Tracker</h1>
+  </header>
+
+  <main>
+    <div class="column-container">
+      <!-- Calorie Tracker Section -->
+      <section id="calorie-tracker">
+        <h2>Calorie Tracker</h2>
+        <label for="date-selector">Select Date:</label>
+        <input type="date" id="date-selector" onchange="displayCalories()">
+
+        <form id="calorie-form">
+          <label for="calories">Enter Calories:</label>
+          <input type="number" id="calories" name="calories" required>
+          
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Other">Other</option>
+          </select>
+          
+          <button type="button" onclick="addCalories()">Add</button>
+        </form>
+        
+        <h3>Calories for <span id="displayed-day"></span></h3>
+        <div id="calorie-list-container">
+          <ul id="breakfast-list"><strong>Breakfast:</strong></ul>
+          <ul id="lunch-list"><strong>Lunch:</strong></ul>
+          <ul id="dinner-list"><strong>Dinner:</strong></ul>
+          <ul id="other-list"><strong>Other:</strong></ul>
+        </div>
+        <p id="total-calories"></p>
+      </section>
+
+      <!-- PR Estimator and Tracker Section -->
+      <section id="pr-estimator">
+        <h2>PR Estimator</h2>
+        <form id="pr-form">
+          <label for="weight">Weight Lifted (lbs):</label>
+          <input type="number" id="weight" name="weight" required>
+          <label for="reps">Reps:</label>
+          <input type="number" id="reps" name="reps" required>
+          <button type="button" onclick="calculatePR()">Calculate</button>
+        </form>
+        <p id="pr-result"></p>
+        
+        <!-- PR Tracker Section -->
+        <h3>PR Tracker</h3>
+        <form id="pr-tracker-form">
+          <label for="exercise">Exercise:</label>
+          <input type="text" id="exercise" name="exercise" required>
+          
+          <label for="pr-weight">Weight (lbs):</label>
+          <input type="number" id="pr-weight" name="pr-weight" required>
+
+          <button type="button" onclick="addPR()">Add PR</button>
+        </form>
+        <ul id="pr-tracker-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
